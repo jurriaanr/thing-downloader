@@ -1,0 +1,68 @@
+﻿<Window x:Class="ThingDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ThingDownloader"
+        mc:Ignorable="d"
+        Title="Thing Downloader 0.1" Height="380" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox 
+            Name="Input" 
+            AcceptsReturn="True"
+            TextWrapping="NoWrap"
+            HorizontalAlignment="Stretch"
+            Margin="10 10 0 10"
+            Grid.Column="0"
+            Grid.Row="0"
+            GotFocus="Input_OnGotFocus"
+            >
+            Insert list of URL's
+        </TextBox>
+        <TextBox 
+            Name="MyConsole" 
+            AcceptsReturn="False"
+            TextWrapping="NoWrap"
+            HorizontalAlignment="Stretch"
+            Margin="10 5"
+            Grid.Column="0"
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            BorderThickness="0"
+            IsReadOnly="True"
+            IsHitTestVisible="False"
+            FontSize="10"
+        >
+        </TextBox>
+        <Button 
+            Name="Button"
+            Grid.Row="0" 
+            Grid.Column="1" 
+            Width="80" 
+            Height="35" 
+            Margin="10 0" 
+            Click="ButtonBase_OnClick"
+            >
+            Download
+        </Button>            
+        <ProgressBar 
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="1"
+            Name="ProgressBar"
+            HorizontalAlignment="Stretch"
+            Height="10"
+            Margin="10 0 10 10"
+            >
+        </ProgressBar>
+    </Grid>
+</Window>
